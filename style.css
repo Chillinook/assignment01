@@ -1,0 +1,104 @@
+.container{
+    width: 90vw;
+    height: 95vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 170px 1fr 1fr 230px;
+    grid-template-rows: 70px 50px 1fr 50px;
+    grid-template-areas: 
+            "nav1 nav1 nav1 nav1" 
+            "nav2 nav2 nav2 nav2"
+            "side main main ski"
+            "side foot foot foot";
+}
+.nav1 {
+    grid-area: nav1;
+}
+.nav1bgimg{
+    background-image: url('images/thai.webp');
+    background-size: contain;
+}
+.nav2 {
+    background-image: linear-gradient(to right, #FDFCFB, #6c6767);
+//  background-color: rgb(204, 192, 192);
+    grid-area: nav2;
+    overflow: hidden;    
+}
+.nav2 a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.nav2 a:hover {
+    background-color: #6c6767;
+}
+.nav2 input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 6px;
+    font-size: 17px;
+}
+.side {
+    background-color: rgb(244, 248, 249);
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-around;
+}
+.btn {
+    opacity: 0.6; 
+    transition: 0.3s;
+}
+.btn:hover {opacity: 1}
+.main {
+    grid-area: main;    
+    opacity: 1;
+}
+.bgimg{
+    background-image: url('images/phuket.jpg'); 
+    background-size: cover; 
+    /* opacity: 0.7; */
+    /* filter: opacity(0.5); */
+}
+.font{
+    color: black;
+}
+.ski{
+    background-image: linear-gradient(to bottom right,#1FC5A8 , #5761B2);
+//    background-color: #6dd5ed;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+} 
+.foot {
+    background-color: black;
+    grid-area: foot;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+h1,h3,li{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+h2{
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;   
+}
